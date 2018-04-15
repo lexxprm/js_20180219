@@ -14,9 +14,9 @@
 
             this.el.innerHTML = `
                 <div class="chat">
-                    <div class="chat_title"></div>
-                    <div class="chat_name"></div>
-                    <div class="chat_message"></div>
+                    <span class="chat_title"></span>
+                    <span class="chat_name"></span>
+                    <span class="chat_message"></span>
                 </div>
         `;
 
