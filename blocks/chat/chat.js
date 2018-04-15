@@ -4,18 +4,20 @@
     class Chat {
 
         constructor(el, data) {
-
+            this.el = el;
+            this.data = data;
+            this.render();
 
         }
 
         render() {
 
             this.el.innerHTML = `
-                <!-- тут будет форма чата какая?-->
-                <form class="auth">
-                    <input class="auth__name" name="login"/>Login
-                    <button class="auth__submit">Login</button>
-                </form>
+                <div class="chat">
+                    <div class="chat_title"></div>
+                    <div class="chat_name"></div>
+                    <div class="chat_message"></div>
+                </div>
         `;
 
         }
