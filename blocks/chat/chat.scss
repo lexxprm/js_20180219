@@ -1,14 +1,16 @@
-.chat{
+.chat {
     width: 300px;
     margin: auto;
     bakground-color: #19ff19;
     color: #fff;
     font-size: 14px;
-}
 
-.chat_title{
-    font-size: 16px;
-}
-.chat_message{
-    color: #4d4;
+    &__title {
+        font-size: 16px;
+    }
+
+    &__message {
+        color: #4d4;
+    }
+
 }

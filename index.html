@@ -5,23 +5,16 @@
     <title>First page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <script src="blocks/auth/auth.js"></script>
-    <script src="blocks/chat/chat.js"></script>
-    <script src="blocks/message/message.js"></script>
+    <script src="./app.js"></script>
 </head>
 <body>
     <h1>Чат</h1>
+
 
     <div class="js-auth"></div>
         <div class="js-chat"></div>
         <div class="js-message"></div>
     </div>
 
-
-    <script>
-        let auth = new Auth(document.querySelector('.js-auth'), {});
-        let chat = new Chat(document.querySelector('.js-chat'), {});
-        let message = new Message(document.querySelector('.js-message'), {});
-    </script>
 </body>
 </html>

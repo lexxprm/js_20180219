@@ -1,29 +1,19 @@
-(function () {
-    'use strict';
+import {Message} from '../message/message';
+import template from './chat.pug';
 
-    class Chat {
+export class Chat {
 
-        constructor(el, data) {
-            this.el = el;
-            this.data = data;
-            this.render();
-
-        }
-
-        render() {
-
-            this.el.innerHTML = `
-                <div class="chat">
-                    <span class="chat_title"></span>
-                    <span class="chat_name"></span>
-                    <span class="chat_message"></span>
-                </div>
-        `;
-
-        }
+    constructor(el, data) {
+        this.el = el;
+        this.data = data;
+        this.render();
 
     }
 
-    window.Chat = Chat;
-})();
+    render() {
+        console.log(2143);
+        this.el.innerHTML = template();
+    }
+
+}
 
