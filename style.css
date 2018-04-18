@@ -12,29 +12,12 @@
   color: #4d4;
 }
 
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-  color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.button-success {
-  background: #1cb841;
-  /* this is a green */
-}
-
-body {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: auto;
-  background-image: url("./img/2.jpg.jpg");
-  background-size: cover;
-}
-
 h1 {
   color: #00008b;
   text-align: center;
+}
+
+.chat__body {
+  margin-left: auto;
+  margin-right: auto;
 }
