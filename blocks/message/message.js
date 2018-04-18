@@ -20,7 +20,6 @@ export class Message {
     render() {
 
         this.el.innerHTML = template();
-
     }
 
 }
