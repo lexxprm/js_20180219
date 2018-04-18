@@ -73,57 +73,6 @@
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Message = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _message = __webpack_require__(6);
-
-var _message2 = _interopRequireDefault(_message);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Message = exports.Message = function () {
-    function Message(el, data) {
-        _classCallCheck(this, Message);
-
-        this.el = el;
-        this.data = data;
-        this.render();
-
-        var form = this.el.querySelector('form');
-
-        form.addEventListener('submit', function (event) {
-            var message = document.querySelector('.message__input').value;
-            console.log(message);
-
-            event.preventDefault();
-        });
-    }
-
-    _createClass(Message, [{
-        key: 'render',
-        value: function render() {
-
-            this.el.innerHTML = (0, _message2.default)();
-        }
-    }]);
-
-    return Message;
-}();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var pug_has_own_property = Object.prototype.hasOwnProperty;
 
 /**
@@ -351,7 +300,7 @@ function pug_rethrow(err, filename, lineno, str){
     throw err;
   }
   try {
-    str = str || __webpack_require__(7).readFileSync(filename, 'utf8')
+    str = str || __webpack_require__(8).readFileSync(filename, 'utf8')
   } catch (ex) {
     pug_rethrow(err, null, lineno)
   }
@@ -378,6 +327,57 @@ function pug_rethrow(err, filename, lineno, str){
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Message = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _message = __webpack_require__(7);
+
+var _message2 = _interopRequireDefault(_message);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Message = exports.Message = function () {
+    function Message(el, data) {
+        _classCallCheck(this, Message);
+
+        this.el = el;
+        this.data = data;
+        this.render();
+
+        var form = this.el.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+            var message = document.querySelector('.message__input').value;
+            console.log(message);
+
+            event.preventDefault();
+        });
+    }
+
+    _createClass(Message, [{
+        key: 'render',
+        value: function render() {
+
+            this.el.innerHTML = (0, _message2.default)();
+        }
+    }]);
+
+    return Message;
+}();
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -391,7 +391,7 @@ exports.defaultLogin = exports.Auth = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _auth = __webpack_require__(8);
+var _auth = __webpack_require__(5);
 
 var _auth2 = _interopRequireDefault(_auth);
 
@@ -413,8 +413,8 @@ var Auth = exports.Auth = function () {
                 form.addEventListener('submit', function (event) {
 
                         var user_name = document.querySelector('.auth__name').value;
-                        var user_pass = document.querySelector('.auth__pass').value;
-                        console.log(user_name, user_pass);
+
+                        console.log(user_name);
                         event.preventDefault();
                 });
         }
@@ -446,9 +446,9 @@ exports.Chat = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _message = __webpack_require__(0);
+var _message = __webpack_require__(1);
 
-var _chat = __webpack_require__(5);
+var _chat = __webpack_require__(6);
 
 var _chat2 = _interopRequireDefault(_chat);
 
@@ -486,7 +486,7 @@ var _auth = __webpack_require__(2);
 
 var _chat = __webpack_require__(3);
 
-var _message = __webpack_require__(0);
+var _message = __webpack_require__(1);
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -506,34 +506,34 @@ window.addEventListener('DOMContentLoaded', function () {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pug = __webpack_require__(1);
+var pug = __webpack_require__(0);
 
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cdiv class=\"chat\"\u003E\u003Cspan class=\"chat__title chat__title_active\"\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"chat__message\"\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"chat__name\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";;return pug_html;};
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cform class=\"auth\"\u003E\u003Cinput class=\"form-control sm auth__name\" type=\"text\" placeholder=\"Name\"\u003E\u003Cbutton class=\"btn btn-success auth__submit discription\" type=\"submit\"\u003ESing in\u003C\u002Fbutton\u003E\u003C\u002Fform\u003E";;return pug_html;};
 module.exports = template;
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pug = __webpack_require__(1);
+var pug = __webpack_require__(0);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cdiv class=\"chat\"\u003E\u003Cspan class=\"chat__title chat__title_active\"\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"chat__message\"\u003E\u003C\u002Fspan\u003E\u003Cspan class=\"chat__name\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pug = __webpack_require__(0);
 
 function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cform class=\"message\"\u003E\u003Ctextarea class=\"form-control message__input\" placeholder=\"Your message ...\"\u003E\u003C\u002Ftextarea\u003E\u003Cbutton class=\"btn btn-success button_message discription\" type=\"submit\"\u003ESend\u003C\u002Fbutton\u003E\u003C\u002Fform\u003E";;return pug_html;};
 module.exports = template;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var pug = __webpack_require__(1);
-
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cform class=\"auth\"\u003E\u003Cinput class=\"form-control sm auth__name\" type=\"text\" placeholder=\"Name\"\u003E\u003Cinput class=\"form-control sm auth__pass\" type=\"password\" placeholder=\"Password\"\u003E\u003Cbutton class=\"btn btn-success auth__submit discription\" type=\"submit\"\u003ESing in\u003C\u002Fbutton\u003E\u003C\u002Fform\u003E";;return pug_html;};
-module.exports = template;
 
 /***/ })
 /******/ ]);
