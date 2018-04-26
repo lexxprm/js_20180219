@@ -413,7 +413,6 @@ var Auth = exports.Auth = function () {
                 form.addEventListener('submit', function (event) {
 
                         var user_name = document.querySelector('.auth__name').value;
-
                         console.log(user_name);
                         event.preventDefault();
                 });
@@ -448,6 +447,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _message = __webpack_require__(1);
 
+var _message2 = _interopRequireDefault(_message);
+
 var _chat = __webpack_require__(6);
 
 var _chat2 = _interopRequireDefault(_chat);
@@ -469,6 +470,7 @@ var Chat = exports.Chat = function () {
         key: 'render',
         value: function render() {
             this.el.innerHTML = (0, _chat2.default)();
+            var chat_message = document.querySelector('.chat__message');
         }
     }]);
 

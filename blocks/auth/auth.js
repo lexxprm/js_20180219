@@ -14,7 +14,6 @@ export class Auth {
         form.addEventListener('submit', event => {
 
           let user_name = document.querySelector('.auth__name').value
-
           console.log(user_name);
             event.preventDefault();
 

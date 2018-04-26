@@ -10,11 +10,13 @@ export class Message {
         let form = this.el.querySelector('form');
 
         form.addEventListener('submit', event => {
-          let message = document.querySelector('.message__input').value
+        let message = document.querySelector('.message__input').value
           console.log(message);
+      
 
             event.preventDefault();
         });
+
     }
 
     render() {

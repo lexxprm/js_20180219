@@ -1,4 +1,5 @@
 import {Message} from '../message/message';
+import message from '../message/message';
 import template from './chat.pug';
 
 export class Chat {
@@ -12,6 +13,8 @@ export class Chat {
 
     render() {
         this.el.innerHTML = template();
+        let chat_message = document.querySelector('.chat__message')
+        
 
     }
 
